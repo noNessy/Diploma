@@ -1,5 +1,20 @@
+@font-face {
+    font-family: "OpenSans" ;
+    src: url(../fonts/OpenSans-Regular.woff),
+    url(../fonts/OpenSans-Regular.woff2),
+    url(../fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "OpenSans";
+    src: url(../fonts/OpenSans-Bold.woff),
+    url(../fonts/OpenSans-Bold.woff2),
+    url(../fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
 body {
-    margin: 0;
+    margin: 0 0;
     font-family: "Open Sans";
 }
 
@@ -29,7 +44,7 @@ body {
 .header-content {
     width: 1200px;
     z-index: 1;
-    padding: 2em 1em 0;
+    padding: 2em 1em 9.5em;
 }
 
 .header-menu {
@@ -50,9 +65,11 @@ body {
     margin: 0;
 }
 
-.menu-item {
-    margin: 1.3em;
+.menu-point:not(:last-child){
+    padding-right:2.5em;
+}
 
+.menu-item {
     font-size: 13px;
     text-transform: uppercase;
     font-family: "Open Sans";
@@ -62,7 +79,9 @@ body {
 }
 
 h1 {
-    margin: 3em 5.5em 3.4em;
+    padding-top: 2.6em;
+    margin: auto;
+    width: 60%;
     color: #ffffff;
     font-size: 45px;
     text-transform: uppercase;
@@ -93,29 +112,48 @@ h1 {
     justify-content: center;
 }
 
+.card1{
+    
+    background-image: url(/images/trend1.jpg);
+    background-repeat: no-repeat;
+    background-color:#004727;
+    background-size: 100%;
+
+}
+.card2{
+    background-image: url(/images/trend2.jpg);
+    background-repeat: no-repeat;
+    background-color:#004727;
+    background-size: 100%;
+}
+.card3{
+    background-image: url(/images/trend3.jpg);
+    background-repeat: no-repeat;
+    background-color:#004727;
+    background-size: 100%;
+}
+.card4{
+    background-image: url(/images/trend4.jpg);
+    background-repeat: no-repeat;
+    background-color:#004727;
+    background-size: 100%;
+}
+
 .card-item {
+    width: 25%;
     position: relative;
     text-align: center;
 }
 
 .card-item:not(:last-child) {
-    padding-right: 0.2em;
-}
-
-.card-item img {
-    display: block;
-    min-width: 25vw;
-    filter: brightness(40%)
+    margin-right: 0.2%;
 }
 
 .trend-text {
-    padding: 2.5em 2.5em 3em 2.5em;
+    margin: 16% 1.5em 1em;
+    padding: 2.5em 2em 2.5em 2em;
     text-align: left;
     border: #6f6339 3px solid;
-    position: absolute;
-    bottom: 4%;
-    right: 5%;
-    left: 5%;
 }
 
 .trend-text span {
@@ -133,8 +171,11 @@ h1 {
     list-style: none;
 }
 
-.trend-text a {
-    padding-right: 1.5em;
+.trend-text li:not(:last-child){
+    padding-right:1em;
+}
+
+.text-tag {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -142,6 +183,327 @@ h1 {
     color: #b59f5b;
 }
 
+.text-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#ffffff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.main-aside {
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    padding: 3.5em 1em 0;
+    width: 1200px;
+  }
+  
+  .main {
+    width: 49em;
+  }
+  
+  .card {
+    display: flex;
+    box-sizing: content-box;
+    padding-bottom: 3.1em;
+  }
+  
+  .card img {
+    width: 380px;
+    height: 300px;
+  }
+  
+  .card-info {
+    padding-left: 2em;
+  }
+  
+  .card-tag-list {
+    display: flex;
+    list-style: none;
+    margin: 0 0 0.6em 0;
+    padding-left: 0;
+  }
+  .card-tag li:not(:last-child){
+    padding-right:1.3em;
+  }
+  .card-tag a {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #b59f5b;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .card-info-link {
+    margin: 0px;
+    line-height: 24px;
+  }
+  
+  .card-info-link-item {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+  }
+  
+  .data-autor {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2.8em;
+    padding-top: 1.7em;
+  }
+  
+  .card-data {
+    font-size: 12px;
+    color: #888888;
+    font-weight: 400;
+  }
+  
+  .card-autor {
+    font-size: 12px;
+    color: #000000;
+    font-weight: 700;
+    padding-left: 1.8em;
+  }
+  
+  .card-desc {
+    font-size: 15px;
+    line-height: 22px;
+    color: #0f0d0e;
+    font-weight: 400;
+  }
+  
+  .aside {
+    width: 17.5em;
+  }
+  
+  .aside-info {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 1.8em;
+  
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+  }
+  
+  .aside-info::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 65px;
+    height: 3px;
+    margin-top: 12px;
+  
+    background-color: #e1d9bd;
+  }
+  
+  .aside-card {
+    display: flex;
+    width: 100%;
+    padding-bottom: 1.2em;
+  }
+  .aside-card:last-child{
+    padding-bottom: 0;
+  }
+  
+  .aside-image {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .data-desc {
+    padding-left: 1.2em;
+  }
+  
+  .aside-data {
+    font-size: 12px;
+    color: #878787;
+    font-weight: 400;
+  }
+  .aside-desc {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .aside-desc-title {
+    text-decoration: none;
+    color: #0f0d0e;
+  }
+  
+  .search-card {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  
+  .search {
+    display: flex;
+  }
+  
+  .search-group {
+    width: 100%;
+  }
+  
+  .field {
+    width: 200px;
+    height: 46px;
+    padding-left: 25px;
+    padding-right: 45px;
+  
+    border: #f4f7f6;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+    font-family: "Open Sans";
+  
+    background-color: #f4f7f6;
+  }
+  
+  .search-card button {
+    position: absolute;
+    margin-left: 224px;
+  
+    width: 48px;
+    height: 48px;
+  
+    border: none;
+    background-image: url("../svg/search.svg");
+    background-size: 16px 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #b59f5b;
+  }
+  
+  .aside-info-distr {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 1.8em;
+  
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+    font-family: "Open Sans";
+  }
+  
+  .aside-info-distr::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 65px;
+    height: 3px;
+    margin-top: 1.1em;
+    background-color: #e1d9bd;
+  }
+  
+  .email-card {
+    margin-bottom: 4em;
+  }
+  
+  .email-field {
+    width: 255px;
+    height: 48px;
+    padding-top: 0;
+    margin-bottom: 1em;
+    padding-left: 1em;
+  
+    border: #f4f7f6;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 400;
+  
+    background-color: #f4f7f6;
+  }
+  
+  .email-card button {
+    width: 270px;
+    height: 48px;
+    border: solid #b59f5b;
+  
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+  
+    background-color: #b59f5b;
+  }
+  .aside-info-theme {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+  
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-weight: 700;
+  }
+  
+  .aside-info-theme::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 65px;
+    height: 3px;
+    margin-top: 1em;
+    background-color: #e1d9bd;
+  }
+  .tag {
+    margin-bottom: 2.4em;
+  }
+  
+  .tags-list {
+    margin-top: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000;
+  }
+  
+  .tags-list-item {
+    list-style-type: none;
+    margin: 5px 3px;
+  }
+  
+  .tags-list-item-name {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 700;
+    display: block;
+    padding: 3px 13px;
+    border: 3px solid #eeeeee;
+  }
+  
+  .theme-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .theme-list li {
+    padding-top: 0.9em;
+    padding-bottom: 0.7em;
+    border-bottom: 2px solid #eee;
+  }
+
+   .theme-list a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 700;
+  }
+
+  .theme-list sup {
+    padding-left: 5px;
+    font-size: 12px;
+    color: #b59f5b;
+    font-weight: 700;
+  }
 
 .footer {
     display: flex;
@@ -149,30 +511,28 @@ h1 {
     justify-content: center;
 
     margin: auto;
-    padding: 0px 20px;
     width: 1200px;
 }
 
 .socials {
     width: 100%;
-    padding: 12px;
+    padding: 0.8em;
     background-color: #f4f7f6;
 }
 
 .socials ul {
-    margin-right: 50px;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    flex-direction: row;
     list-style: none;
 }
 
-.social-link {
-    margin: 0 10px;
-    display: block;
-    flex-direction: row;
-    box-sizing: border-box;
+.socials li:not(:last-child){
+    padding-right: 1.3em;
+}
 
+.social-link {
     width: 32px;
     height: 32px;
 
@@ -184,17 +544,17 @@ h1 {
 
 .social-link-dribbble {
     display: block;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg");
+    background-image: url(../svg/001-dribbble.svg);
 }
 
 .social-link-pinterest {
     display: block;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg");
+    background-image: url(../svg/001-pinterest.svg);
 }
 
 .social-link-tumblr {
     display: block;
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg");
+    background-image: url(../svg/003-tumblr.svg);
 }
 
 .social-link-text {
@@ -206,11 +566,9 @@ h1 {
 
 .copyright {
     text-decoration: none;
-    margin-bottom: 35px;
-    padding: 67px 0px 50px 10px;
+    padding: 5.6em 0px 4.5em;
     text-align: center;
     color: #999999;
-
     font-size: 12px;
     font-weight: 700;
     font-family: "Open Sans";
