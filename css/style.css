@@ -114,26 +114,26 @@ h1 {
 
 .card1{
     
-    background-image: url(/images/trend1.jpg);
+    background-image: url(../images/trend1.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
     background-size: 100%;
 
 }
 .card2{
-    background-image: url(/images/trend2.jpg);
+    background-image: url(../images/trend2.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
     background-size: 100%;
 }
 .card3{
-    background-image: url(/images/trend3.jpg);
+    background-image: url(../images/trend3.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
     background-size: 100%;
 }
 .card4{
-    background-image: url(/images/trend4.jpg);
+    background-image: url(../images/trend4.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
     background-size: 100%;
