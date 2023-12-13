@@ -113,12 +113,10 @@ h1 {
 }
 
 .card1{
-    
     background-image: url(../images/trend1.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
     background-size: 100%;
-
 }
 .card2{
     background-image: url(../images/trend2.jpg);
@@ -139,6 +137,17 @@ h1 {
     background-size: 100%;
 }
 
+.card-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+}
+
 .card-item {
     width: 25%;
     position: relative;
@@ -150,10 +159,11 @@ h1 {
 }
 
 .trend-text {
+    position: relative;
     margin: 16% 1.5em 1em;
     padding: 2.5em 2em 2.5em 2em;
     text-align: left;
-    border: #6f6339 3px solid;
+    border: #b59f5b8c 3px solid;
 }
 
 .trend-text span {
@@ -191,14 +201,20 @@ h1 {
     font-size: 20px;
 }
 
-.main-aside {
-    justify-content: space-between;
+.main-aside-craft {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 3.5em 1em 0;
     width: 1200px;
   }
-  
+
+.main-aside{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
   .main {
     width: 49em;
   }
@@ -505,6 +521,101 @@ h1 {
     font-weight: 700;
   }
 
+  .craft{
+    margin-bottom: 4.5em;
+    width: 1200px;
+  }
+
+  .craft-topic {
+    margin: 2em 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.craft-cards{
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.craft-item {
+  width: 33%;
+}
+
+.craft-item:not(:last-child) {
+  margin-right: 4.5em;
+}
+
+.craft-img{
+  position: relative;
+  left: 7%;
+}
+
+.craft-text{
+  display:block;
+  position:relative;
+  height: 35%;
+  width: 85%;
+  bottom: 2.5em;
+  padding: 4em 1.5em ;
+  font-size: 15px;
+  border: #b59f5b9c solid 3px;
+}
+
+.craft-text h4{
+  margin: 0;
+}
+
+.craft-text p{
+  padding: 1.5em 0 2em;
+  margin: 0;
+}
+
+.craft-item-topic a{
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.craft-link{
+  color: #b59f5b;
+  text-decoration: none;
+}
+
+.prices-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product-new-price{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.product-old-price{
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: line-through;
+  display: block;
+}
+
+.product-button{
+  width: 140px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background-color: #b59f5b;
+  color: #ffffff ;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -516,7 +627,7 @@ h1 {
 
 .socials {
     width: 100%;
-    padding: 0.8em;
+    padding: 0.8em 0;
     background-color: #f4f7f6;
 }
 
