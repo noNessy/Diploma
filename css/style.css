@@ -15,7 +15,7 @@
 
 body {
     margin: 0 0;
-    font-family: "Open Sans";
+    font-family: "OpenSans";
 }
 
 .header {
@@ -66,7 +66,7 @@ body {
 }
 
 .menu-point:not(:last-child){
-    padding-right:2.5em;
+    margin-right:2.5em;
 }
 
 .menu-item {
@@ -78,9 +78,9 @@ body {
     font-weight: 400;
 }
 
-h1 {
-    padding-top: 2.6em;
-    margin: auto;
+.menu-title {
+    display: block;
+    margin: 2.6em auto 0;
     width: 60%;
     color: #ffffff;
     font-size: 45px;
@@ -150,6 +150,10 @@ h1 {
 
 .card-item {
     width: 25%;
+    display: flex;
+    align-items: flex-end;
+    min-height: 320px;
+    padding: 1.5em 1em;
     position: relative;
     text-align: center;
 }
@@ -160,7 +164,6 @@ h1 {
 
 .trend-text {
     position: relative;
-    margin: 16% 1.5em 1em;
     padding: 2.5em 2em 2.5em 2em;
     text-align: left;
     border: #b59f5b8c 3px solid;
@@ -182,7 +185,7 @@ h1 {
 }
 
 .trend-text li:not(:last-child){
-    padding-right:1em;
+    margin-right:1em;
 }
 
 .text-tag {
@@ -222,16 +225,15 @@ h1 {
   .card {
     display: flex;
     box-sizing: content-box;
-    padding-bottom: 3.1em;
+    margin-bottom: 3.1em;
   }
   
   .card img {
     width: 380px;
-    height: 300px;
   }
   
   .card-info {
-    padding-left: 2em;
+    margin-left: 2em;
   }
   
   .card-tag-list {
@@ -241,7 +243,7 @@ h1 {
     padding-left: 0;
   }
   .card-tag li:not(:last-child){
-    padding-right:1.3em;
+    margin-right:1.3em;
   }
   .card-tag a {
     font-size: 14px;
@@ -267,8 +269,8 @@ h1 {
   .data-autor {
     display: flex;
     flex-direction: row;
-    padding-bottom: 2.8em;
-    padding-top: 1.7em;
+    margin-bottom: 2.8em;
+    margin-top: 1.7em;
   }
   
   .card-data {
@@ -281,7 +283,7 @@ h1 {
     font-size: 12px;
     color: #000000;
     font-weight: 700;
-    padding-left: 1.8em;
+    margin-left: 1.8em;
   }
   
   .card-desc {
@@ -290,16 +292,19 @@ h1 {
     color: #0f0d0e;
     font-weight: 400;
   }
+
+  .card-desc p{
+    margin:0;
+  }
   
   .aside {
     width: 17.5em;
   }
   
   .aside-info {
-    margin: 0;
+    margin: 0 0 1.8em;
     text-align: center;
     font-size: 14px;
-    padding-bottom: 1.8em;
   
     text-transform: uppercase;
     color: #0f0d0e;
@@ -320,7 +325,7 @@ h1 {
   .aside-card {
     display: flex;
     width: 100%;
-    padding-bottom: 1.2em;
+    margin-bottom: 1.2em;
   }
   .aside-card:last-child{
     padding-bottom: 0;
@@ -332,7 +337,7 @@ h1 {
   }
   
   .data-desc {
-    padding-left: 1.2em;
+    margin-left: 1.2em;
   }
   
   .aside-data {
@@ -353,8 +358,8 @@ h1 {
   }
   
   .search-card {
-    padding-top: 4em;
-    padding-bottom: 4em;
+    margin-top: 4em;
+    margin-bottom: 4em;
   }
   
   .search {
@@ -364,14 +369,20 @@ h1 {
   .search-group {
     width: 100%;
   }
+
+  .search:hover{
+    border: 1px solid #b59f5b;
+    transition: border 0.3s ease-out;
+  }
   
   .field {
-    width: 200px;
-    height: 46px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
     padding-left: 25px;
-    padding-right: 45px;
+    padding-right: 60px;
   
-    border: #f4f7f6;
+    border: none;
     font-size: 13px;
     color: #000000;
     font-weight: 400;
@@ -382,7 +393,7 @@ h1 {
   
   .search-card button {
     position: absolute;
-    margin-left: 224px;
+    margin-left: 12%;
   
     width: 48px;
     height: 48px;
@@ -395,11 +406,11 @@ h1 {
     background-color: #b59f5b;
   }
   
+
   .aside-info-distr {
-    margin: 0;
     text-align: center;
     font-size: 14px;
-    padding-bottom: 1.8em;
+    margin: 0 0 1.8em;
   
     text-transform: uppercase;
     color: #0f0d0e;
@@ -422,8 +433,9 @@ h1 {
   }
   
   .email-field {
-    width: 255px;
-    height: 48px;
+    box-sizing: border-box;
+    width:100% ;
+    height: 49px;
     padding-top: 0;
     margin-bottom: 1em;
     padding-left: 1em;
@@ -435,9 +447,14 @@ h1 {
   
     background-color: #f4f7f6;
   }
+
+  .email-field:hover{
+    border: 1px solid #b59f5b;
+    transition: border 0.3s ease-out;
+  }
   
   .email-card button {
-    width: 270px;
+    width: 100%;
     height: 48px;
     border: solid #b59f5b;
   
@@ -448,6 +465,14 @@ h1 {
   
     background-color: #b59f5b;
   }
+
+  .email-card button:hover{
+    color:#b59f5b;
+    border: 1px solid #b59f5b;
+    background-color: #ffffff;
+    transition: all 0.3s ease-out;
+  }
+
   .aside-info-theme {
     margin: 0;
     text-align: center;
@@ -483,6 +508,11 @@ h1 {
     list-style-type: none;
     margin: 5px 3px;
   }
+
+  .tags-list-item:hover{
+    transform: scale(110%);
+  transition: background-color 3s, transform 0.5s;
+  }
   
   .tags-list-item-name {
     text-decoration: none;
@@ -501,20 +531,27 @@ h1 {
     margin: 0;
   }
   
-  .theme-list li {
+  .theme-list-item {
     padding-top: 0.9em;
     padding-bottom: 0.7em;
     border-bottom: 2px solid #eee;
   }
 
-   .theme-list a {
+  .theme-list-item:hover{
+    transform: scale(110%);
+    transition: background-color 3s, transform 0.5s;
+  }
+
+   .theme-list-item-name {
     text-decoration: none;
     font-size: 14px;
     color: #000000;
     font-weight: 700;
   }
 
-  .theme-list sup {
+  .span-up {
+    position:relative;
+    bottom: 0.5em;
     padding-left: 5px;
     font-size: 12px;
     color: #b59f5b;
@@ -522,12 +559,11 @@ h1 {
   }
 
   .craft{
-    margin-bottom: 4.5em;
     width: 1200px;
   }
 
   .craft-topic {
-    margin: 2em 0;
+    margin: 0 0 2em;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -550,8 +586,9 @@ h1 {
 }
 
 .craft-img{
+
   position: relative;
-  left: 7%;
+  left: 5%;
 }
 
 .craft-text{
@@ -569,9 +606,8 @@ h1 {
   margin: 0;
 }
 
-.craft-text p{
-  padding: 1.5em 0 2em;
-  margin: 0;
+.craft-text-p{
+  margin: 1.5em 0 2em;
 }
 
 .craft-item-topic a{
@@ -616,6 +652,13 @@ h1 {
   color: #ffffff ;
 }
 
+.product-button:hover{
+  background-color: #ffffff;
+  border: 1px solid #b59f5b;
+  color: #b59f5b;
+  transition: all 0.3s ease-out;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -627,7 +670,7 @@ h1 {
 
 .socials {
     width: 100%;
-    padding: 0.8em 0;
+    padding: 1.2em 0;
     background-color: #f4f7f6;
 }
 
@@ -683,4 +726,232 @@ h1 {
     font-size: 12px;
     font-weight: 700;
     font-family: "Open Sans";
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+@media (min-width:641px) and (max-width: 1200px) and (orientation:portrait){
+  .menu-list{
+    width:35px;
+    height: 35px;
+    background-image: url(../svg/menu-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .menu-point{
+    display: none;
+  }
+  .menu-title {
+    margin: 2.6em auto 0;
+    width: 90%;
+    font-size: 1.3em;
+  }
+
+  .trend-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card-item{
+    width: calc(45vw - 1.3px);
+    flex-wrap: wrap;
+  }
+
+  .card-item:nth-child(3){
+    margin-right: 0.4%;
+  }
+  .card-item:nth-child(1){
+    margin-right: 0.4%;
+  }
+  .card-item:nth-child(2){
+    margin-right: 0;
+  }
+  .card-item:nth-child(2){
+    margin-bottom: 0.4%;
+  }
+  .card-item:nth-child(1){
+    margin-bottom: 0.4%;
+  }
+
+  .trend-text{
+    padding: 2.5em 2em 2em;
+  }
+  .text-link{
+    font-size: 0.7em;
+  }
+
+  .main-aside-craft{
+    width:auto;
+  }
+
+  .main-aside{
+    justify-content:space-between;
+  }
+  .main{
+    width: 400px;
+  }
+
+  .card{
+    width:395px;
+    flex-direction: column;
+  }
+  .card::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 380px;
+    height: 3px;
+    margin: 1.2em 0 0 0;
+    background-color: #eee;
+  }
+
+  .card-info{
+    margin: 0;
+    width: 380px;
+  }
+
+  .search-card button{
+    margin-left: 22.5%;
+  }
+
+  .craft{
+    width: auto;
+  }
+
+  .craft-cards{
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+
+  .craft-item{
+    margin-right: 11.5%;
+    width: 50%;
+  }
+
+  .craft-text{
+    width: 94%;
+  }
+
+  .footer{
+    margin: 0;
+    width:calc(100% - 2em);
+  }
+
+  .socials{
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+@media (min-width:641px) and (max-width: 1200px) and (orientation:landscape){
+  .menu-list{
+    width:35px;
+    height: 35px;
+    background-image: url(../svg/menu-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .menu-point{
+    display: none;
+  }
+  .menu-title {
+    margin: 2.6em auto 0;
+    width: 90%;
+    font-size: 1.3em;
+  }
+
+  .card-item{
+    width: calc(22% - 0.2%);
+  }
+
+  .trend-text{
+    padding: 2.5em 2em 2em;
+  }
+
+  .text-link{
+    font-size: 0.7em;
+  }
+
+  .main-aside-craft{
+    width:auto;
+  }
+
+  .main-aside{
+    justify-content:space-between;
+  }
+  
+  .main{
+    width: 400px;
+  }
+
+  .card{
+    width:395px;
+    flex-direction: column;
+  }
+  .card::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 380px;
+    height: 3px;
+    margin: 1.2em 0 0 0;
+    background-color: #eee;
+  }
+
+  .card-info{
+    margin: 0;
+    width: 380px;
+  }
+
+  .craft{
+    width: auto;
+  }
+  
+  .craft-cards{
+    width: 85%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+
+  .craft-item{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .craft-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .craft-item:nth-child(1){
+    margin-right: 4.5em;
+  }
+
+  .craft-img {
+    left: 6%;
+  }
+
+  .craft-text{
+    width: 290px;
+  }
+
+  .footer{
+    margin: 0;
+    width:calc(100% - 2em);
+  }
+
+  .socials{
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }

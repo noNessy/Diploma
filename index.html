@@ -18,7 +18,7 @@
                     <li class="menu-point"> <a class="menu-item" href="#0">Контакты</a> </li>
                 </ul>
             </div>
-            <h1>Блог о творчестве, спорте, и образе жизни</h1>
+            <h1><a class="menu-title">Блог о творчестве, спорте, и образе жизни</a></h1>
         </div>
     </header>
 </head>
@@ -88,7 +88,7 @@
                 </div>
               </div>
               <div class="card-desc">
-                Итак, вы в Питере. Раннее утро. Лед с реки каналов уже сошел, запущены фонтаны города... Музеи еще закрыты. Что посмотреть?
+                <p>Итак, вы в Питере. Раннее утро. Лед с реки каналов уже сошел, запущены фонтаны города... Музеи еще закрыты. Что посмотреть?</p>
               </div>
             </div>
           </article>
@@ -113,7 +113,7 @@
                 </div>
               </div>
               <div class="card-desc">
-                Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найт в шкафу.
+                <p>Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найт в шкафу.</p>
               </div>
             </div>
           </article>
@@ -137,8 +137,8 @@
                 </div>
               </div>
               <div class="card-desc">
-                Лето на носу, а с ним и музыкальнеы фестивали. На каком же из них вы разобьете свою палатку?
-                Мы составили списк лучших летних фестивалей по всему миру.
+                <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьете свою палатку?
+                Мы составили списк лучших летних фестивалей по всему миру.</p>
               </div>
             </div>
           </article>
@@ -163,7 +163,7 @@
                 </div>
               </div>
               <div class="card-desc">
-                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
+                <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
               </div>
             </div>
           </article>
@@ -189,7 +189,7 @@
                 </div>
               </div>
               <div class="card-desc">
-                Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.
+                <p>Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
               </div>
             </div>
           </article>
@@ -253,9 +253,11 @@
             <div class="search-card">
               <form class="search">
                 <label class="search-group">
+                  <span class="visually-hidden">Найти...</span>
                   <input class="field" name="query" placeholder="Найти..." required>
                 </label>
                 <button class="button">
+                  <span class="visually-hidden">Кнопка поиска</span>
                 </button>
               </form>
             </div>
@@ -266,12 +268,14 @@
               <div class="email-card">
                 <form class="email">
                   <label class="email-group">
+                    <span class="visually-hidden">Ваш email-адрес</span>
                     <input class="email-field" name="query" placeholder="Ваш email-адрес" required>
                   </label>
-                </form>
-                <button class="button">
+                  <button class="button">
+                    <span class="visually-hidden">подписаться</span>
                   подписаться
                 </button>
+                </form>
               </div>
             </section>
             <section class="tag">
@@ -295,12 +299,12 @@
               </h3>
               <div class="theme-list">
                 <ul>
-                  <li><a href="#0">Красота </a><sup>12</sup></li>
-                  <li><a href="#0">Здоровье</a><sup>4</sup></li>
-                  <li><a href="#0">Образ жизни</a><sup>145</sup></li>
-                  <li><a href="#0">Музыка</a><sup>28</sup></li>
-                  <li><a href="#0">Спорт</a><sup>65</sup></li>
-                  <li><a href="#0">Йога</a><sup>8</sup></li>
+                  <li class="theme-list-item"><a class="theme-list-item-name" href="#0">Красота </a><span class="span-up">12</span></li>
+                  <li class="theme-list-item"><a class="theme-list-item-name" href="#0">Здоровье</a><span class="span-up">4</span></li>
+                  <li class="theme-list-item"><a class="theme-list-item-name" href="#0">Образ жизни</a><span class="span-up">145</span></li>
+                  <li class="theme-list-item"><a class="theme-list-item-name" href="#0">Музыка</a><span class="span-up">28</span></li>
+                  <li class="theme-list-item"><a class="theme-list-item-name" href="#0">Спорт</a><span class="span-up">65</span></li>
+                  <li class="theme-list-item"><a class="theme-list-item-name" href="#0">Йога</a><span class="span-up">8</span></li>
                 </ul>
               </div>
             </section>
@@ -318,13 +322,14 @@
                   </picture>
                   <div class = "craft-text">
                   <h4 class = "craft-item-topic"><a href="#0">подушки на диван</a></h4>
-                    <p>Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class = "craft-link">здесь</a>.</p>
+                    <p class="craft-text-p">Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class = "craft-link">здесь</a>.</p>
                     <div class = "prices-button">
                     <div class="product-prices">
                       <span class="product-price product-old-price">1000 Р</span>
                       <span class="product-price product-new-price">800 Р</span>
                     </div>
-                    <button class="product-button" type="button">В магазин</button>
+                    <button class="product-button">
+                      <span class="visually-hidden">В магазин</span>В магазин</button>
                   </div> 
                 </div>
                 </div>
@@ -334,13 +339,14 @@
                   </picture>
                   <div class = "craft-text">
                   <h4 class = "craft-item-topic"><a href="#0">кукла "зайчик"</a></h4>
-                  <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class = "craft-link">весенняя серия</a> постов в блоге и несколько подкастов.</p>
+                  <p class="craft-text-p">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class = "craft-link">весенняя серия</a> постов в блоге и несколько подкастов.</p>
                   <div class = "prices-button">
                   <div class="product-prices">
                     <span class="product-price product-old-price"></span>
                     <span class="product-price product-new-price">3500 Р</span>
                   </div>
-                  <button class="product-button" type="button">В магазин</button>
+                  <button class="product-button">
+                    <span class="visually-hidden">В магазин</span>В магазин</button>
                   </div>
                   </div>
                 </div>
@@ -350,13 +356,14 @@
                   </picture>
                   <div class = "craft-text">
                   <h4 class = "craft-item-topic"><a href="#0">шестиугольная рама</a></h4>
-                  <p>Необычная рамка для украшения дома из видео <a href="#0" class = "craft-link">«Как сделать рамку из подручных средств за 30 минут»</a></p>
+                  <p class="craft-text-p">Необычная рамка для украшения дома из видео <a href="#0" class = "craft-link">«Как сделать рамку из подручных средств за 30 минут»</a></p>
                   <div class = "prices-button">
                   <div class="product-prices">
                     <span class="product-price product-old-price">500 Р</span>
                     <span class="product-price product-new-price">400 P</span>
                   </div>
-                  <button class="product-button" type="button">В магазин</button>
+                  <button class="product-button">
+                    <span class="visually-hidden">В магазин</span>В магазин</button>
                   </div>
                 </div>
                 </div>
@@ -368,19 +375,19 @@
     <div class="socials">
         <ul>
             <li>
-                <address href="#0" class="social-link social-link-dribbble">
+                <a href="#0" class="social-link social-link-dribbble">
                     <span class="social-link-text">dribbble</span>
-                </address>
+                </a>
             </li>
             <li>
-                <address href="#0" class="social-link social-link-pinterest">
+                <a href="#0" class="social-link social-link-pinterest">
                     <span class="social-link-text">pinterest</span>
-                </address>
+                </a>
             </li>
             <li>
-                <address href="#0" class="social-link social-link-tumblr">
+                <a href="#0" class="social-link social-link-tumblr">
                     <span class="social-link-text">tumblr</span>
-                </address>
+                </a>
             </li>
         </ul>
     </div>
