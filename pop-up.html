@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up</title>
+    <link rel="stylesheet" href="css/pop-up.css"> 
+</head>
+    <body>
+        <div class="back"> 
+                <div class="return-button">
+                    <a class="return" href="#0"></a> 
+                </div>
+            <div class="popup">
+                <h1 class="topic">ваш фидбек</h1>
+                <span class="question">Как часто вы заходите на сайт?</span>
+                <div class="content">
+                    <form class="var-form">
+                        <label class="content-text">
+                            <input class="var-block" placeholder="Почти каждый день" required>
+                        </label>
+                    </form>
+                </div>
+                <span class="question">Вы подписаны на e-mail рассылку?</span>
+                <div class="radio-buttons">
+                        <div class="radio">
+                            <label>
+                                <input class="radio-check" id="radio-yes" value="yes" name="radio" type="radio"/>
+                                <span class="radio-text" for="radio-yes">Да</span>  
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input class="radio-check" id="radio-no" value="no" name="radio" type="radio"/>
+                                <span class="radio-text" for="radio-no">Нет</span>  
+                            </label>
+                        </div> 
+                </div>
+                <span class="question">Расскажите, какой контент вы хотели бы вдиеть на нашем сайте?</span>
+                <div class="content">
+                <form class="content-form">
+                    <label class="content-block">
+                        <input class="text-block" placeholder="Может, больше рецептов?" required>
+                    </label>
+                    <button class="button">
+                        <span class="visually-hidden">отправить</span>
+                    отправить
+                    </button>
+                </form>
+                </div>
+            </div>
+          </div>
+    </body>
+</html>

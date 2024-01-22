@@ -55,7 +55,6 @@ body {
 
 .logo {
     width: 11em;
-    margin-left: 1.2em;
 }
 
 .menu-list {
@@ -116,25 +115,25 @@ body {
     background-image: url(../images/trend1.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
-    background-size: 100%;
+    background-size: cover;
 }
 .card2{
     background-image: url(../images/trend2.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
-    background-size: 100%;
+    background-size: cover;
 }
 .card3{
     background-image: url(../images/trend3.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
-    background-size: 100%;
+    background-size: cover;
 }
 .card4{
     background-image: url(../images/trend4.jpg);
     background-repeat: no-repeat;
     background-color:#004727;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .card-item:before {
@@ -152,7 +151,7 @@ body {
     width: 25%;
     display: flex;
     align-items: flex-end;
-    min-height: 320px;
+    
     padding: 1.5em 1em;
     position: relative;
     text-align: center;
@@ -182,6 +181,7 @@ body {
     display: flex;
     flex-direction: row;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 .trend-text li:not(:last-child){
@@ -224,7 +224,6 @@ body {
   
   .card {
     display: flex;
-    box-sizing: content-box;
     margin-bottom: 3.1em;
   }
   
@@ -364,6 +363,7 @@ body {
   
   .search {
     display: flex;
+    position: relative;
   }
   
   .search-group {
@@ -393,8 +393,8 @@ body {
   
   .search-card button {
     position: absolute;
-    margin-left: 12%;
-  
+    margin-left:16.35vw;
+  right: 0;
     width: 48px;
     height: 48px;
   
@@ -538,7 +538,7 @@ body {
   }
 
   .theme-list-item:hover{
-    transform: scale(110%);
+    transform: scale(105%);
     transition: background-color 3s, transform 0.5s;
   }
 
@@ -581,23 +581,18 @@ body {
   width: 33%;
 }
 
-.craft-item:not(:last-child) {
-  margin-right: 4.5em;
-}
-
-.craft-img{
-
-  position: relative;
-  left: 5%;
+picture{
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .craft-text{
   display:block;
   position:relative;
   height: 35%;
-  width: 85%;
   bottom: 2.5em;
-  padding: 4em 1.5em ;
+  padding: 4em 1em;
   font-size: 15px;
   border: #b59f5b9c solid 3px;
 }
@@ -682,8 +677,8 @@ body {
     list-style: none;
 }
 
-.socials li:not(:last-child){
-    padding-right: 1.3em;
+.socials-links:not(:last-child){
+    margin-right: 1.3em;
 }
 
 .social-link {
@@ -739,6 +734,10 @@ body {
 }
 
 @media (min-width:641px) and (max-width: 1200px) and (orientation:portrait){
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
+  }
+
   .menu-list{
     width:35px;
     height: 35px;
@@ -763,24 +762,18 @@ body {
   }
 
   .card-item{
-    width: calc(45vw - 1.3px);
+    width: calc(50vw - 0.3% - 31px);
     flex-wrap: wrap;
   }
 
-  .card-item:nth-child(3){
-    margin-right: 0.4%;
-  }
-  .card-item:nth-child(1){
-    margin-right: 0.4%;
-  }
   .card-item:nth-child(2){
     margin-right: 0;
   }
   .card-item:nth-child(2){
-    margin-bottom: 0.4%;
+    margin-bottom: 0.3%;
   }
   .card-item:nth-child(1){
-    margin-bottom: 0.4%;
+    margin-bottom: 0.3%;
   }
 
   .trend-text{
@@ -830,16 +823,33 @@ body {
 
   .craft-cards{
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: space-around;
+  }
+
+  .craft-item {
+    margin-right: 0;
   }
 
   .craft-item{
     margin-right: 11.5%;
-    width: 50%;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .craft-text{
-    width: 94%;
+  .craft-item:nth-child(1) {
+    margin-right: 0;
+  }
+  .craft-item:nth-child(2) {
+    margin-right: 0;
+  }
+  .craft-item:nth-child(3) {
+    margin-right: 0;
+  }
+
+  picture{
+    width: 100%;
   }
 
   .footer{
@@ -853,6 +863,10 @@ body {
   }
 }
 @media (min-width:641px) and (max-width: 1200px) and (orientation:landscape){
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
+  }
+
   .menu-list{
     width:35px;
     height: 35px;
@@ -924,7 +938,7 @@ body {
   }
 
   .craft-item{
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
   }
@@ -933,16 +947,317 @@ body {
     margin-right: 0;
   }
 
-  .craft-item:nth-child(1){
-    margin-right: 4.5em;
+  
+  .footer{
+    margin: 0;
+    width:calc(100% - 2em);
+  }
+
+  .socials{
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+@media (max-width:640px) and (orientation:portrait){
+  .header {
+    background-image: url("../images/banner-mobile.jpg");
+  }
+
+  .header-content{
+    padding: 2em 1em 23em;
+  }
+  .menu-list{
+    width:35px;
+    height: 35px;
+    background-image: url(../svg/menu-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .menu-point{
+    display: none;
+  }
+
+  .header-menu{
+    align-items: start;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: space-around;
+    position:relative;
+    width: 75vw;
+    margin: 50% 0 10%;
+    top: 100px;
+    left: 9.5vw;
+  }
+
+  .menu-title {
+    margin: 2.6em auto 0;
+    width: 90%;
+    font-size: 1.3em;
+  }
+
+  .trend-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card-item{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .card-item:not(:last-child) {
+    margin-right: 0;
+  }
+  .card-item:not(:last-child) {
+    margin-bottom: 0.4%;
+  }
+
+  .trend-text {
+    padding: 1.5em 2em;
+  }
+  
+  .main-aside-craft {
+    width: auto;
+  }
+
+  .main-aside{
+    flex-direction: column;
+  }
+
+  .main{
+    width: 400px;
+  }
+
+  .card{
+    width:395px;
+    flex-direction: column;
+  }
+  .card::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 380px;
+    height: 3px;
+    margin: 1.2em 0 0 0;
+    background-color: #eee;
+  }
+
+  .card-info{
+    margin: 0;
+    width: 380px;
+  } 
+
+  .craft-topic {
+    margin: 2em 0 2em;
+  }
+
+  .aside {
+    width: 100%;
+  }
+
+  .aside-info{
+    font-size: 20px;
+  }  
+
+  .aside-desc {
+    font-size: 1em;
+  }
+
+  .aside-info-distr{
+    font-size: 20px;
+  }
+
+  .aside-info-theme{
+    font-size: 20px;
+  }
+  
+  .tags-list {
+    justify-content: center;
+  }
+
+  .craft{
+    width: auto;
+  }
+  
+  .craft-cards{
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .craft-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .craft-item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .craft-img {
+   left: 10vw;
+  }
+
+  .footer{
+    margin: 0;
+    width:calc(100% - 2em);
+  }
+
+  .socials{
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+@media (max-width:640px) and (orientation:landscape){
+  .header {
+    background-image: url("../images/banner-mobile.jpg");
+  }
+
+  .menu-list{
+    width:35px;
+    height: 35px;
+    background-image: url(../svg/menu-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .menu-point{
+    display: none;
+  }
+
+  .header-menu{
+    align-items: start;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: space-around;
+    position:relative;
+    width: 75vw;
+    margin-left: 0;
+    margin-bottom: 20%;
+    top: 100px;
+    left: 9.5vw;
+  }
+
+  .menu-title {
+    margin: 1.6em auto 0;
+    width: 90%;
+    font-size: 1.3em;
+  }
+
+  .trend-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card-item{
+    width: calc(50vw - 32px - 0.3%);
+    flex-wrap: wrap;
+  }
+
+  .card-item:nth-child(2) {
+    margin-right: 0;
+  }
+  
+  .card-item:nth-child(1){
+    margin-bottom: 0.4%;
+  }
+
+  .card-item:nth-child(2){
+    margin-bottom: 0.4%;
+  }
+
+
+  .trend-text {
+    padding: 1.5em 2em;
+  }
+
+  .text-link{
+    font-size:0.65em;
+  }
+
+  .main-aside-craft {
+    width: auto;
+  }
+
+  .main-aside{
+    flex-direction: column;
+  }
+
+  .main{
+    width: 400px;
+  }
+
+  .card{
+    width:395px;
+    flex-direction: column;
+  }
+  .card::after{
+    content: "";
+    display: block;
+    margin: auto;
+    width: 380px;
+    height: 3px;
+    margin: 1.2em 0 0 0;
+    background-color: #eee;
+  }
+
+  .card-info{
+    margin: 0;
+    width: 380px;
+  } 
+
+  .craft-topic {
+    margin: 2em 0 2em;
+  }
+
+  .aside {
+    width: 100%;
+  }
+
+  .aside-info{
+    font-size: 20px;
+  }
+
+  .aside-desc {
+    font-size: 1em;
+  }
+
+  .aside-info-distr{
+    font-size: 20px;
+  }
+
+  .aside-info-theme{
+    font-size: 20px;
+  }
+
+  .tags-list {
+    justify-content: center;
+  }
+
+  .craft{
+    width: auto;
+  }
+  
+  .craft-cards{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .craft-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .craft-img {
     left: 6%;
-  }
-
-  .craft-text{
-    width: 290px;
   }
 
   .footer{
